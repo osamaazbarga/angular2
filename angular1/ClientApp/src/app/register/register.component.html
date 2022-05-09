@@ -1,0 +1,35 @@
+<p>Id</p>
+<input type="text" placeholder="ssn" class="form-control" [(ngModel)]="ssn"/>
+
+<p>Name</p>
+<input type="text" placeholder="Name" class="form-control" [(ngModel)]="name"/>
+
+<p>Address</p>
+<input type="text" placeholder="Address" class="form-control" [(ngModel)]="address"/>
+
+<p>Age</p>
+<input type="text" placeholder="Age" class="form-control" [(ngModel)]="age"/>
+
+<p>Gender</p>
+<input type="checkbox" [(ngModel)]="gender"/>male
+<br/>
+<button class="btn-primary btn" (click)="addCustomer()" >SignUp</button>
+
+<table class="table table-dark table-srriped table-bordered">
+  <tr>
+    <td>ssn</td>
+    <td>name</td>
+    <td>address</td>
+    <td>age</td>
+    <td>gender</td>
+  </tr>
+
+  <tr *ngFor="let item of customers">
+    <td>{{item.ssn}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.address}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.gender}}</td>
+
+  </tr>
+</table>
